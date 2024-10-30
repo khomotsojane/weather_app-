@@ -75,21 +75,21 @@ export default function Home() {
         onChangeText={setCity}
       />
 
-      {/* Search Button */}
+
       <TouchableOpacity style={styles.button} onPress={handleSearch}>
         <Text style={styles.buttonText}>Search</Text>
       </TouchableOpacity>
 
-      {/* Show Loading Spinner */}
+   
       {loading && <ActivityIndicator size="large" color="#ffffff" style={{ marginTop: 20 }} />}
 
-      {/* Display Weather Data */}
+   
       {weather && !loading && (
         <View style={styles.weatherContainer}>
           <Text style={styles.city}>{weather.name}</Text>
           <Text style={styles.temp}>{weather.main.temp}°C</Text>
 
-          {/* Weather Icon and Description */}
+        
           <View style={styles.iconContainer}>
             <Image
               source={{ uri: `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png` }}
